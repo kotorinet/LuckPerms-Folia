@@ -64,7 +64,7 @@ This is a **Folia-compatible fork** with full support for multi-threaded region 
 
 ### Quick Start
 
-1. Download `LuckPerms-Bukkit-5.5.0.jar` from releases
+1. Download `LuckPerms-Folia.jar` from releases
 2. Place in your server's `plugins` folder
 3. Start the server to generate configuration files
 4. Configure `config.yml` to your needs
