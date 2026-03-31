@@ -1,0 +1,19 @@
+// Simplified build script for Bukkit/Folia only
+// This avoids the heavy Forge/NeoForge/Fabric configuration
+
+apply plugin: 'java'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.lucko.me/' }
+        maven { url 'https://repo.papermc.io/repository/maven-public/' }
+        maven { url 'https://libraries.minecraft.net/' }
+    }
+}
+
+task buildBukkitOnly {
+    dependsOn ':common:build', ':common:loader-utils:build', ':bukkit:loader:build', ':bukkit:build'
+    group = 'build'
+    description = 'Builds only the Bukkit module with dependencies'
+}
