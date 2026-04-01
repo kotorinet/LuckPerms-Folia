@@ -11,7 +11,7 @@ dependencies {
     compileOnly project(':common:loader-utils')
 
     compileOnly 'dev.folia:folia-api:1.21.11-R0.1-SNAPSHOT'
-    compileOnly('net.kyori:adventure-platform-bukkit:4.4.0') {
+    implementation('net.kyori:adventure-platform-bukkit:4.4.0') {
         exclude(module: 'adventure-bom')
         exclude(module: 'adventure-api')
         exclude(module: 'adventure-nbt')
@@ -28,6 +28,7 @@ shadowJar {
 
     dependencies {
         include(dependency('me.lucko.luckperms:.*'))
+        include(dependency('net.kyori:adventure-platform-bukkit'))
         include(dependency('com.github.ben-manes.caffeine:.*'))
         include(dependency('com.squareup.okhttp3:.*'))
         include(dependency('com.squareup.okio:.*'))
